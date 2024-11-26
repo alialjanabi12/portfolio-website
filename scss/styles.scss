@@ -1,0 +1,82 @@
+//|> HEADER
+.header {
+  background: #151515 url("../images/intro-bg.jpg") no-repeat center center;
+  background-size: cover;
+  // the affect of the background when scrolling down
+  background-attachment: fixed;
+}
+
+// adding the black over the header image
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(rgb(0, 0, 0), 0.7);
+  z-index: 0;
+}
+.header .social {
+  bottom: 50px;
+}
+.header .roles {
+  font-family: "lora", serif;
+}
+.header .text-container {
+  z-index: 10;
+}
+// |> ABOUT ME
+.about-img {
+  width: 300px;
+}
+
+//|>Portfolio
+.project:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+  opacity: 0.8;
+}
+
+//|> SERVICES
+.services {
+  background: url("../images/bg.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(rgb(0, 0, 0), 0.7);
+  z-index: 0;
+}
+.services .container {
+  z-index: 10;
+}
+
+// |> MEDIA QUERIES
+@media (max-width: 767px) {
+  .header .social i {
+    font-size: 30px;
+  }
+  .header .roles {
+    font-size: 10px !important;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  //|> STATS
+  .stats .stat {
+    border-right: 0 !important;
+    margin-bottom: 40px;
+    border-bottom: var(--bs-dark) solid 1px;
+    padding-bottom: 20px;
+  }
+}
